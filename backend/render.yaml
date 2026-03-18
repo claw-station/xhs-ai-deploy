@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: xhs-ai-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: ZHIPU_API_KEY
+        value: d36a0233955149d395871c03595e7500.9SMTCfgwD7TYhlAX
+      - key: RENDER
+        value: "true"
