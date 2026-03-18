@@ -108,37 +108,7 @@ const mockTrendingPosts: TrendingPost[] = [
   }
 ]
 
-const generateMockContent = (topic: string, _selectedTrends: TrendingPost[]): Partial<GeneratedContent> => {
-  const titles = [
-    `${topic}必看！这份攻略帮你避坑省钱`,
-    `被问爆的${topic}秘籍，今天全分享`,
-    `${topic}新手入门，看这一篇就够了`,
-    `亲测有效！${topic}的正确打开方式`,
-    `${topic}干货合集，建议收藏`
-  ]
-  
-  const contents = [
-    `姐妹们，今天来分享我的${topic}心得！\n\n✨首先，一定要做好功课，不要盲目跟风\n\n💡我的建议是：\n1. 先了解自己的需求\n2. 多看真实测评\n3. 从小样开始尝试\n\n🌟亲测好用的几个小技巧：\n• 坚持是关键\n• 记录变化过程\n• 及时调整方法\n\n希望这篇分享对你们有帮助！记得点赞收藏哦～`,
-    
-    `关于${topic}，我真的有太多话要说！\n\n🔥踩过无数坑后总结的经验：\n\n❌不要这样做：\n• 盲目跟风\n• 期望过高\n• 三天打鱼两天晒网\n\n✅正确做法：\n• 制定合理计划\n• 循序渐进\n• 保持耐心\n\n💕坚持下来的效果真的惊艳！\n\n有问题评论区留言，看到都会回复～`,
-    
-    `${topic}入门指南，新手必看！\n\n📌准备工作：\n了解基础知识和注意事项\n\n📌执行步骤：\n1. 第一步：做好前期准备\n2. 第二步：按计划执行\n3. 第三步：及时调整优化\n\n📌常见误区：\n很多人一开始就错了...\n\n💫我的亲身经历告诉大家，方法对了事半功倍！\n\n觉得有用的话点个❤️吧！`
-  ]
-  
-  const tags = [
-    [topic, '干货分享', '新手必看'],
-    [topic, '经验分享', '避坑指南'],
-    [topic, '好物推荐', '真实测评'],
-    [topic, '日常分享', '生活记录']
-  ]
-  
-  return {
-    title: titles[Math.floor(Math.random() * titles.length)],
-    content: contents[Math.floor(Math.random() * contents.length)],
-    tags: tags[Math.floor(Math.random() * tags.length)],
-    images: []
-  }
-}
+// 删除未使用的 generateMockContent 函数
 
 export default function ContentCreation({ onSave, onNavigate }: ContentCreationProps) {
   const [step, setStep] = useState<CreationStep>('input')
